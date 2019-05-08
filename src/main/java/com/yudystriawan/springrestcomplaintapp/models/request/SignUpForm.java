@@ -1,12 +1,9 @@
-package com.yudystriawan.springrestcomplaintapp.model;
+package com.yudystriawan.springrestcomplaintapp.models.request;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.UniqueElements;
 
-import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import java.util.Set;
 
 @Data
 public class SignUpForm {

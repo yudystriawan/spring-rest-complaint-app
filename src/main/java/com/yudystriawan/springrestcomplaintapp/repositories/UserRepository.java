@@ -1,6 +1,6 @@
 package com.yudystriawan.springrestcomplaintapp.repositories;
 
-import com.yudystriawan.springrestcomplaintapp.model.User;
+import com.yudystriawan.springrestcomplaintapp.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,15 +1,12 @@
-package com.yudystriawan.springrestcomplaintapp.model;
+package com.yudystriawan.springrestcomplaintapp.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NaturalId;
-import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -41,10 +38,10 @@ public class User {
     private Set<Role> roles;
 
 
-    public User(String username, String name, String email, String encode) {
+    public User(String username, String name, String email, String password) {
         this.username = username;
         this.name = name;
         this.email = email;
-        this.password = encode;
+        this.password = password;
     }
 }

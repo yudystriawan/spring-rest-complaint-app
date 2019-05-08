@@ -1,6 +1,5 @@
 package com.yudystriawan.springrestcomplaintapp.securities;
 
-import com.yudystriawan.springrestcomplaintapp.components.JwtProvider;
 import com.yudystriawan.springrestcomplaintapp.sevices.CustomUserDetails;
 import com.yudystriawan.springrestcomplaintapp.sevices.UserDetailsServiceImpl;
 import org.slf4j.Logger;
@@ -20,7 +19,7 @@ import java.io.IOException;
 public class JwtAuthTokenFilter extends OncePerRequestFilter {
 
     @Autowired
-    private JwtProvider provider;
+    private JwtTokenProvider provider;
 
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
@@ -30,10 +29,10 @@ public class JwtAuthTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         try {
-            String jwt = getJwt(httpServletRequest);
+            String token = getJwt(httpServletRequest);
 
-            if (jwt != null && provider.validateJwtToken(jwt)){
-                String username = provider.getUserNameFormJwtToken(jwt);
+            if (token != null && provider.validateJwtToken(token)){
+                String username = provider.getUserNameFormJwtToken(token);
 
                 CustomUserDetails userDetails = (CustomUserDetails) userDetailsService.loadUserByUsername(username);
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());

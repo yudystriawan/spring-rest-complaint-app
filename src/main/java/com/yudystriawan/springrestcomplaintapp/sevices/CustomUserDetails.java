@@ -1,7 +1,7 @@
 package com.yudystriawan.springrestcomplaintapp.sevices;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.yudystriawan.springrestcomplaintapp.model.User;
+import com.yudystriawan.springrestcomplaintapp.models.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,6 +1,6 @@
 package com.yudystriawan.springrestcomplaintapp.config;
 
-import com.yudystriawan.springrestcomplaintapp.components.JwtAuthEntryPoint;
+import com.yudystriawan.springrestcomplaintapp.securities.JwtAuthEntryPoint;
 import com.yudystriawan.springrestcomplaintapp.securities.JwtAuthTokenFilter;
 import com.yudystriawan.springrestcomplaintapp.sevices.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;

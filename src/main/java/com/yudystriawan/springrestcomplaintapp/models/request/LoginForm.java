@@ -1,4 +1,4 @@
-package com.yudystriawan.springrestcomplaintapp.model;
+package com.yudystriawan.springrestcomplaintapp.models.request;
 
 import lombok.Data;
 

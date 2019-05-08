@@ -1,4 +1,4 @@
-package com.yudystriawan.springrestcomplaintapp.components;
+package com.yudystriawan.springrestcomplaintapp.securities;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.yudystriawan.springrestcomplaintapp.model;
+package com.yudystriawan.springrestcomplaintapp.models;
 
 public enum RoleName {
     ROLE_USER,
